@@ -115,7 +115,7 @@ class AIClient:
                     response = gemini_model.generate_content(full_prompt, generation_config=generation_config)
                     if response.text:
                         logger.info(f"    ✓ Generación exitosa con Gemini")
-                        return response.text.strip()
+                        return self._clean_ai_output(response.text)
                 except Exception as e:
                     err_str = str(e).lower()
                     if "429" in err_str or "too many requests" in err_str or "quota" in err_str or "resource exhausted" in err_str:
@@ -169,7 +169,7 @@ class AIClient:
                 tps = tokens / duration_s if duration_s > 0 else 0
 
                 logger.info(f"    ✓ Generados {tokens} tokens en {duration_s:.1f}s ({tps:.1f} t/s)")
-                return text
+                return self._clean_ai_output(text)
 
             except (http_requests.exceptions.Timeout, http_requests.exceptions.HTTPError, http_requests.exceptions.ConnectionError) as e:
                 logger.warning(f"    ⚠ Intento {attempt} fallido: {e}")
