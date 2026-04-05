@@ -28,7 +28,7 @@ theme = 'PaperMod'
   images = ['https://compras-top.pages.dev/og-default.png']
 
   [params.homeInfoParams]
-    Title = '🛒 Tu Guía de Compras Inteligente [v2.0]'
+    Title = '🛒 Tu Guía de Compras Inteligente'
     Content = """
 **¿Cansado de perder horas comparando productos?** Nosotros lo hacemos por ti.
 
