@@ -102,7 +102,15 @@ class AIClient:
             logger.error(f"Error instanciando GenerativeModel: {e}")
             gemini_model = None
 
-        full_prompt = f"INSTRUCCIONES DEL SISTEMA:\n{system}\n\nTEXTO A GENERAR:\n{prompt}" if system else prompt
+        full_prompt = (
+            f"INSTRUCCIONES DEL SISTEMA (FORMATO MARKDOWN):\n{system}\n\n"
+            f"PASOS Y DATOS:\n{prompt}\n\n"
+            "IMPORTANTE: Envuelve tu respuesta EXCLUSIVAMENTE con estas etiquetas:\n"
+            "[START_MARKDOWN]\n"
+            "(Contenido Markdown)\n"
+            "[END_MARKDOWN]\n"
+            "Cualquier texto fuera de estas etiquetas será ignorado."
+        )
 
         if gemini_model:
             for attempt in range(1, retries + 1):
@@ -186,6 +194,32 @@ class AIClient:
         if not text:
             return ""
         
+        # Estrategia primaria: Delimitadores explícitos
+        match = re.search(r"\[START_MARKDOWN\](.*?)\[END_MARKDOWN\]", text, re.DOTALL | re.IGNORECASE)
+        if match:
+            text = match.group(1).strip()
+        else:
+            # Estrategia secundaria: Limpiar preámbulos conocidos si fallan los delimitadores
+            loop_limit = 20
+            # (Mantener el cleaning anterior por si acaso)
+            # ... (omitted for brevity in replacement chunk but I'll keep the logic)
+            # Actually, I'll provide the full logic for clarity
+            for _ in range(loop_limit):
+                processed = False
+                meta_patterns = [
+                    r"^(?:Writing assistant|SEO and Affiliate|Return EXCLUSIVELY|Role|Task|Input|Context|Constraint|Requirement|Length|Structure|Draft|Para \d).*?[:.]?.*?\n",
+                    r"^\s*[\*\-]\s*(?:Role|Task|Input|Context|Constraint|Requirement|Language|Tone|Markdown|Paragraph).*?\n",
+                    r"^\s*[\*\-]\s*.*?\? (?:Yes|No|Check)\n",
+                    r"^\s*[a-zA-Z\s]+:\s*.*?\n",
+                ]
+                for p in meta_patterns:
+                    new_text = re.sub(p, "", text, count=1, flags=re.IGNORECASE | re.MULTILINE)
+                    if new_text != text:
+                        text = new_text
+                        processed = True
+                if not processed:
+                    break
+
         # Eliminar pensamientos <thought> si existen (estilo DeepSeek/Gemini interno)
         text = re.sub(r"<thought>.*?</thought>", "", text, flags=re.DOTALL)
         
@@ -313,28 +347,26 @@ def _product_summary(products: list[dict]) -> str:
     return "\n".join(lines)
 
 
-SYSTEM_WRITER = """Eres un asistente de redacción que ayuda a organizar y presentar información sobre productos de forma clara y objetiva.
+SYSTEM_WRITER = """Eres un asistente de redacción experto en SEO y afiliados.
+Tu OBJETIVO es devolver EXCLUSIVAMENTE el contenido del artículo en formato Markdown.
 
-REGLAS CRÍTICAS:
-1. SOLO devuelve el contenido en formato Markdown final.
-2. NO incluyas explicaciones, introducciones de prompt, preámbulos, despedidas ni cadenas de pensamiento ("thought process").
-3. NO añadas metadatos sobre cómo has generado el texto.
-4. Idioma: Español de España.
-5. Tono: Neutral y analítico. No uses adjetivos exagerados ni lenguaje publicitario.
-6. Instrucción OBLIGATORIA para cajas HTML:
-   <div class="pros-box"><span class="box-title">Puntos destacados</span><ul><li>...</li></ul></div>
-   <div class="cons-box"><span class="box-title">Por mejorar</span><ul><li>...</li></ul></div>
-7. NUNCA menciones precios exactos. Usa: [Ver precio actual en Amazon](URL)
+REGLAS DE ORO (INCUMPLIMIENTO = FALLO):
+1. NO incluyas introducciones como "Aquí tienes el texto", "Entendido", "Writing assistant" ni ninguna confirmación.
+2. NO incluyas preámbulos, despedidas ni explicaciones de lo que vas a escribir.
+3. NO incluyas metadatos, roles, tareas ni descripciones del proceso.
+4. SOLO devuelve el código Markdown puro.
+5. Idioma: Español de España.
+6. Tono: Neutral, informativo y analítico. Evita el lenguaje publicitario exagerado.
+7. HTML: Usa exactamente los bloques <div class="pros-box"> y <div class="cons-box"> según se pida.
+8. PRECIOS: NUNCA menciones cifras exactas de precio en el texto narrativo. Usa siempre Call to Action.
 """
 
-SYSTEM_TECHNICAL = """Eres un técnico de producto experto. Genera fichas técnicas precisas en formato tabla Markdown.
+SYSTEM_TECHNICAL = """Eres un técnico de producto. Tu ÚNICA función es generar tablas técnicas en Markdown.
 
-REGLAS CRÍTICAS:
-1. SOLO devuelve la tabla Markdown. NO incluyas introducciones ni explicaciones adicionales.
-2. Formato: tabla Markdown de dos columnas (Característica | Detalle).
-3. DEDUCE las características (material, dimensiones, uso) a partir del nombre del producto y su categoría.
-4. No uses "No especificado" si puedes deducirlo de forma razonable.
-5. Sin texto narrativo, solo la tabla.
+REGLAS:
+1. SOLO devuelve la tabla Markdown.
+2. NO incluyas textos antes o después de la tabla.
+3. Formato: Característica | Detalle.
 """
 
 
