@@ -225,7 +225,7 @@ def run_pipeline(niche: str, keyword: str = None, dry_run: bool = False, skip_ai
                 subprocess.run(["git", "commit", "-m", commit_msg], cwd=str(PROJECT_ROOT), check=True)
                 
                 # 3. Push
-                push = subprocess.run(["git", "push", "origin", "master"], cwd=str(PROJECT_ROOT), capture_output=True, text=True)
+                push = subprocess.run(["git", "push", "origin", "main"], cwd=str(PROJECT_ROOT), capture_output=True, text=True)
                 if push.returncode == 0:
                     logger.info("  ✅ ¡Despliegue completado con éxito! Cloudflare Pages iniciará el build en breve.")
                 else:

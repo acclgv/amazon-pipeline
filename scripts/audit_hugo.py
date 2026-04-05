@@ -1,5 +1,5 @@
 """
-audit_hugo.py — Auditor QA de archivos Markdown en site/content/.
+audit_hugo.py — Auditor QA de archivos Markdown en content/.
 
 Comprueba:
   1. Enlaces HTTP inseguros (deben ser HTTPS).
@@ -126,7 +126,7 @@ def main():
     md_files = list(SITE_CONTENT_DIR.rglob("*.md"))
 
     if not md_files:
-        print("[!] No se encontraron archivos .md en site/content/")
+        print("[!] No se encontraron archivos .md en content/")
         return
 
     print(f"\n[SCAN] Auditando {len(md_files)} archivos Markdown...\n")

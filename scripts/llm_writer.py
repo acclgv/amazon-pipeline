@@ -7,7 +7,7 @@ Fase 5 del roadmap:
   3. Genera cada sección del artículo con Ollama (llama3.1 / mistral).
   4. Ensambla el artículo completo con Front Matter YAML, placeholders de precio,
      enlaces de afiliado, disclosure y Schema JSON-LD.
-  5. Guarda el .md en site/content/{nicho}/{slug}.md.
+  5. Guarda el .md en content/{nicho}/{slug}.md.
 
 Uso:
   python scripts/llm_writer.py --niche mascotas --keyword "comedero automatico gato"
@@ -725,7 +725,7 @@ def generate_article(
 
 def save_article(niche: str, keyword: str, article: str) -> Path:
     """
-    Guarda el artículo en site/content/{nicho}/{slug}.md.
+    Guarda el artículo en content/{nicho}/{slug}.md.
 
     Returns:
         Path del archivo guardado.

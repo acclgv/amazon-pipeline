@@ -1,0 +1,19 @@
+{
+  "keyword": "test hardening",
+  "niche": "mascotas",
+  "scraped_at": "2026-04-05T14:09:08",
+  "source": "amazon.es",
+  "products": [
+    {
+      "position": 1,
+      "asin": "B0CHRCPMHD",
+      "title": "Anuncio patrocinado: Honhoha Prueba Calidad del Agua,Tiras reactivas para Agua Potable 16 en 1 | Kit Prueba Plomo Agua 100...",
+      "price_eur": 9.01,
+      "rating": 5.0,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61PYQS2Y2wL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CHRCPMHD"
+    }
+  ],
+  "total_results_found": 1
+}
