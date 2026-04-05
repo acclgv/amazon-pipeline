@@ -200,25 +200,27 @@ class AIClient:
             text = match.group(1).strip()
         else:
             # Estrategia secundaria: Limpiar preámbulos conocidos si fallan los delimitadores
-            loop_limit = 20
-            # (Mantener el cleaning anterior por si acaso)
-            # ... (omitted for brevity in replacement chunk but I'll keep the logic)
-            # Actually, I'll provide the full logic for clarity
-            for _ in range(loop_limit):
-                processed = False
-                meta_patterns = [
-                    r"^(?:Writing assistant|SEO and Affiliate|Return EXCLUSIVELY|Role|Task|Input|Context|Constraint|Requirement|Length|Structure|Draft|Para \d).*?[:.]?.*?\n",
-                    r"^\s*[\*\-]\s*(?:Role|Task|Input|Context|Constraint|Requirement|Language|Tone|Markdown|Paragraph).*?\n",
-                    r"^\s*[\*\-]\s*.*?\? (?:Yes|No|Check)\n",
-                    r"^\s*[a-zA-Z\s]+:\s*.*?\n",
-                ]
-                for p in meta_patterns:
-                    new_text = re.sub(p, "", text, count=1, flags=re.IGNORECASE | re.MULTILINE)
-                    if new_text != text:
-                        text = new_text
-                        processed = True
-                if not processed:
-                    break
+            # Pero de forma SEGURA sin borrar metadatos de Front Matter
+            meta_blacklist = [
+                r"^Writing assistant.*?[:.]?.*?\n",
+                r"^SEO and Affiliate.*?[:.]?.*?\n",
+                r"^Role:.*?[:.]?.*?\n",
+                r"^Task:.*?[:.]?.*?\n",
+                r"^Input:.*?[:.]?.*?\n",
+                r"^Context:.*?[:.]?.*?\n",
+                r"^Constraint.*?[:.]?.*?\n",
+                r"^Requirement.*?[:.]?.*?\n",
+                r"^Length:.*?[:.]?.*?\n",
+                r"^Structure:.*?[:.]?.*?\n",
+                r"^\s*[\*\-]\s*Role:.*?\n",
+                r"^\s*[\*\-]\s*Task:.*?\n",
+                r"^\s*[\*\-]\s*Language:.*?\n",
+                r"^\s*[\*\-]\s*Tone:.*?\n",
+                r"^\s*[\*\-]\s*Markdown:.*?\n",
+                r"^\s*[\*\-]\s*.*?\? (?:Yes|No|Check)\n",
+            ]
+            for p in meta_blacklist:
+                text = re.sub(p, "", text, flags=re.IGNORECASE | re.MULTILINE)
 
         # Eliminar pensamientos <thought> si existen (estilo DeepSeek/Gemini interno)
         text = re.sub(r"<thought>.*?</thought>", "", text, flags=re.DOTALL)
@@ -351,14 +353,15 @@ SYSTEM_WRITER = """Eres un asistente de redacción experto en SEO y afiliados.
 Tu OBJETIVO es devolver EXCLUSIVAMENTE el contenido del artículo en formato Markdown.
 
 REGLAS DE ORO (INCUMPLIMIENTO = FALLO):
-1. NO incluyas introducciones como "Aquí tienes el texto", "Entendido", "Writing assistant" ni ninguna confirmación.
-2. NO incluyas preámbulos, despedidas ni explicaciones de lo que vas a escribir.
-3. NO incluyas metadatos, roles, tareas ni descripciones del proceso.
+1. **PULSA DIRECTAMENTE LAS TECLAS**: NO introducciones, NO confirmaciones (ej: "Aquí tienes"), NO preámbulos, NO explicaciones. 
+2. **LIMPIEZA EXTREMA**: Empieza directamente con el contenido solicitado (Front Matter o Texto).
+3. **SIN META-TEXTO**: No menciones tu rol, tu tarea, ni describas el proceso.
 4. SOLO devuelve el código Markdown puro.
 5. Idioma: Español de España.
 6. Tono: Neutral, informativo y analítico. Evita el lenguaje publicitario exagerado.
-7. HTML: Usa exactamente los bloques <div class="pros-box"> y <div class="cons-box"> según se pida.
-8. PRECIOS: NUNCA menciones cifras exactas de precio en el texto narrativo. Usa siempre Call to Action.
+7. HTML: Usa exactamente los bloques <div class="pros-box"> y <div class="cons-box"> con títulos "Lo mejor" y "A tener en cuenta".
+8. PRECIOS: NUNCA menciones cifras exactas de precio en el texto narrativo.
+9. MARCA DE SALIDA: Todo tu contenido DEBE estar obligatoriamente entre [START_MARKDOWN] y [END_MARKDOWN].
 """
 
 SYSTEM_TECHNICAL = """Eres un técnico de producto. Tu ÚNICA función es generar tablas técnicas en Markdown.

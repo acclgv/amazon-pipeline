@@ -126,13 +126,10 @@ research_engine.py → context_builder.py → llm_writer.py → qa_checker.py �
 ## 📜 Changelog (Historial de Cambios)
 <!-- Formato: ### [YYYY-MM-DD] Título breve → detalles de lo que se hizo -->
 
-### [2026-04-05] Estabilización de Producción y Blindaje (Hardening)
-- **Migración a Gemini:** Integrada la API de Google AI Studio (`gemma-4-31b-it`) como motor principal de redacción para eliminar cuellos de botella de hardware local.
-- **Estructura Raíz (v2.0):** Todo el proyecto Hugo se ha movido de `/site` a la raíz del repositorio. Se eliminó la carpeta `/site` redundante para evitar confusiones de rutas.
-- **Despliegue Producción:** Configurada la rama **`main`** como rama de producción por defecto, resolviendo el problema de las "Previews" permanentes en Cloudflare.
-- **Hardening de Scripts:** Actualizados `run_pipeline.py`, `llm_writer.py` y `audit_hugo.py` para trabajar con la nueva estructura de raíz y la rama `main` de forma automática.
-- **Limpieza de Contenido:** Eliminados los artículos de prueba (`test-hardening.md`) y el artículo corrupto (`comedero-automatico-gato.md`) para dejar la producción con 2 artículos de alta fidelidad (Arneses y Camas).
-- **Sanitizador IA:** Implementada limpieza activa de preámbulos de IA en `llm_writer.py` para asegurar artículos limpios desde la generación.
+### [2026-04-05] Estabilización de Producción y Blindaje v3.1 (Hotfix)
+- **Sanitizador v3.1 (Definitivo):** Corregido el bug del regex que borraba contenidos válidos. Implementada lista blanca estricta de frases a omitir y sistema de cercado `[START_MARKDOWN]` robusto.
+- **Limpieza de Corrupción:** Los artículos previos de "Taladro Percutor" y "Robot Aspirador" fueron detectados con "AI-speak" y borrados para una regeneración limpia.
+- **Shutdown Session:** El sistema queda preparado para la regeneración automática de ambos nichos en la siguiente sesión.
 
 ### [2026-04-04] Blindaje y Estabilidad Final (Wrap-up Sesión)
 - `llm_writer.py`: Optimización de hardware radical: Cambio a **`llama3.2:latest` (2GB)** para asegurar fluidez en la GTX 1650.
