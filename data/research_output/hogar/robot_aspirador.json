@@ -1,7 +1,7 @@
 {
   "keyword": "robot aspirador",
   "niche": "hogar",
-  "scraped_at": "2026-04-05T15:11:30",
+  "scraped_at": "2026-04-05T15:16:57",
   "source": "amazon.es",
   "products": [
     {
@@ -96,13 +96,13 @@
     },
     {
       "position": 10,
-      "asin": "B0GJ5NMFC2",
-      "title": "Lefant M330 Pro Robot Aspirador y Fregasuelos con Mapeo 3 en 1, 5000Pa, 150min, Evitación de Obstáculos PSD 190°, Navegaci...",
-      "price_eur": 499.99,
-      "rating": null,
+      "asin": "B0FL2FKQ6C",
+      "title": "Cecotec Robot Aspirador Conga M10. Navegación Giroscópica Ordenada, 2000Pa Presión de Succión, Autonomía 120 Minutos, Sens...",
+      "price_eur": 79.9,
+      "rating": 4.2,
       "review_count": null,
-      "image_url": "https://m.media-amazon.com/images/I/711p2TIlJ6L.jpg",
-      "product_url": "https://www.amazon.es/dp/B0GJ5NMFC2"
+      "image_url": "https://m.media-amazon.com/images/I/81+c3CNw4gL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0FL2FKQ6C"
     }
   ],
   "total_results_found": 10
