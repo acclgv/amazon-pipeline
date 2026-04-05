@@ -1,0 +1,109 @@
+{
+  "keyword": "taladro percutor",
+  "niche": "herramientas",
+  "scraped_at": "2026-04-05T14:41:25",
+  "source": "amazon.es",
+  "products": [
+    {
+      "position": 1,
+      "asin": "B0CR13VKGW",
+      "title": "Anuncio patrocinado: Enventor Martillo Perforador, 1500W Martillo Demoledor, Martillo Percutor con SDS-Plus Mandril, 4500B...",
+      "price_eur": 99.99,
+      "rating": 4.3,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71LKmu9xtoL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CR13VKGW"
+    },
+    {
+      "position": 2,
+      "asin": "B0CWQVZ9BK",
+      "title": "Anuncio patrocinado: Dong Cheng Taladro Percutor a Bateria 20V 50Nm, taladro atornillador batería con 2x2.0Ah baterías, 2...",
+      "price_eur": 63.82,
+      "rating": 4.5,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71-3YWO3xKL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CWQVZ9BK"
+    },
+    {
+      "position": 3,
+      "asin": "B0FH3Y9L9V",
+      "title": "Anuncio patrocinado: TEENO Taladro Percutor con Cable SDS Plus 950W y 17 Accesorios, Martillo perforador con 0-1150RPM/510...",
+      "price_eur": 65.99,
+      "rating": 4.1,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/81qUdv6us3L.jpg",
+      "product_url": "https://www.amazon.es/dp/B0FH3Y9L9V"
+    },
+    {
+      "position": 4,
+      "asin": "B0DLWHJ4MN",
+      "title": "Anuncio patrocinado: DCA Taladro percutor inalámbrico 20V, 40 Nm, portabrocas automático de 13 mm, 22500 IPM, 2 velocidade...",
+      "price_eur": 49.99,
+      "rating": 4.4,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/81wFbFpAHlL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0DLWHJ4MN"
+    },
+    {
+      "position": 5,
+      "asin": "B0CHM2ZMJJ",
+      "title": "Anuncio patrocinado: Enventor Taladro Percutor con Cable 900W, 37 Accesorios, Función 2 en 1, Velocidad Variable 0-3000RP...",
+      "price_eur": 55.49,
+      "rating": 4.5,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71mxovrPWjL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CHM2ZMJJ"
+    },
+    {
+      "position": 6,
+      "asin": "B0CBTZ7F57",
+      "title": "Bosch taladro percutor eléctrico UniversalImpact 730 (taladrado de precisión en mampostería, madera y acero; motor de 730 ...",
+      "price_eur": 54.99,
+      "rating": 4.6,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61U4mbV-tEL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CBTZ7F57"
+    },
+    {
+      "position": 7,
+      "asin": "B07GZ4BWZ2",
+      "title": "BLACK+DECKER 710W Taladro percutor con cable de alto rendimiento, 0-2800 RPM, con 4 brocas y caja de kits, BEH710K-QS",
+      "price_eur": 36.15,
+      "rating": 4.6,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61yShXJHWXL.jpg",
+      "product_url": "https://www.amazon.es/dp/B07GZ4BWZ2"
+    },
+    {
+      "position": 8,
+      "asin": "B092ZNHV8K",
+      "title": "Bosch Taladro percutor eléctrico EasyImpact 600 (600 W, en maletín de transporte)",
+      "price_eur": 49.95,
+      "rating": 4.6,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/51LE8YgJKXL.jpg",
+      "product_url": "https://www.amazon.es/dp/B092ZNHV8K"
+    },
+    {
+      "position": 9,
+      "asin": "B0F33854XS",
+      "title": "Cecotec Taladro Eléctrico Percutor CecoRaptor Impact Drill. 850W, Broca13mm, 4800 rpm, 46000 Impactos por Minuto, Empuñadu...",
+      "price_eur": 20.9,
+      "rating": 4.2,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71Uv-TPBtbL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0F33854XS"
+    },
+    {
+      "position": 10,
+      "asin": "B0CHM2ZMJJ",
+      "title": "Enventor Taladro Percutor con Cable 900W, 37 Accesorios, Función 2 en 1, Velocidad Variable 0-3000RPM, Mango Auxiliar de 3...",
+      "price_eur": 55.49,
+      "rating": 4.5,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71mxovrPWjL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CHM2ZMJJ"
+    }
+  ],
+  "total_results_found": 10
+}

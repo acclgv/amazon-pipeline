@@ -181,6 +181,27 @@ class AIClient:
                 return ""
         return ""
 
+    def _clean_ai_output(self, text: str) -> str:
+        """Limpia el texto de preámbulos y pensamientos de la IA."""
+        if not text:
+            return ""
+        
+        # Eliminar pensamientos <thought> si existen (estilo DeepSeek/Gemini interno)
+        text = re.sub(r"<thought>.*?</thought>", "", text, flags=re.DOTALL)
+        
+        # Eliminar preámbulos comunes de Gemini/Ollama
+        patterns = [
+            r"^(?:Aquí tienes|Aquí está|Claro|Por supuesto|Entendido).*?:\s*",
+            r"^(?:Como modelo de lenguaje|Como asistente|Como IA).*?[.,]\s*",
+            r"^(?:Voy a redactar|Escribiendo|Redactando).*?[.:]\s*",
+            r"^(?:Sección|Parte) \d+.*?[.:]\s*",
+            r"^(?:Aquí presento|A continuación).*?[.:]\s*",
+        ]
+        for p in patterns:
+            text = re.sub(p, "", text, flags=re.IGNORECASE | re.MULTILINE)
+            
+        return text.strip()
+
 # Mantener OllamaClient como alias para compatibilidad con scripts existentes como qa_checker.py
 OllamaClient = AIClient
 
