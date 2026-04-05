@@ -118,19 +118,21 @@ research_engine.py → context_builder.py → llm_writer.py → qa_checker.py �
 | 2026-04-05 | Migración a Google AI Studio (Gemini) | Pivote estratégico de inferencia a `gemma-4-31b-it` vía API para eliminar cuellos de botella de hardware local; Ollama se mantiene como fallback. |
 | 2026-04-05 | Migración Estructural a Raíz (`/`) | Se mueve todo el sitio Hugo de `/site` a la raíz para compatibilidad nativa perfecta con Cloudflare Pages V2 y CI/CD simplificado. |
 | 2026-04-05 | Rama `main` como rama de Producción | Cambio de rama por defecto de `master` a `main` para asegurar que los despliegues en Cloudflare vayan a Producción y no solo a Previews. |
-| 2026-04-05 | Sanitizador de Meta-Texto IA | Implementada función `_clean_ai_output` en `llm_writer.py` para detectar y borrar preámbulos robóticos ("Writing assistant", "Here is...") de Gemini. |
+| 2026-04-05 | Hardening: Sincronización de Scripts | Actualizados `run_pipeline.py`, `llm_writer.py` y `audit_hugo.py` para usar la rama `main` y la estructura de raíz automáticamente. |
+| 2026-04-05 | Purga de Contenido de Prueba | Eliminación de `site/` redundante y artículos de prueba/error para garantizar una producción limpia con 2 artículos validados. |
 
 ---
 
 ## 📜 Changelog (Historial de Cambios)
 <!-- Formato: ### [YYYY-MM-DD] Título breve → detalles de lo que se hizo -->
 
-### [2026-04-05] Estabilización de Producción y Migración de Inferencia
-- **Migración a Gemini:** Integrada la API de Google AI Studio (`gemma-4-31b-it`) como motor principal de redacción.
-- **Estructura Crítica:** Todo el proyecto Hugo se ha movido de `/site` a la raíz del repositorio, eliminando conflictos de sub-módulos y simplificando el despliegue.
-- **Despliegue Producción:** Configurada la rama **`main`** como rama principal, asegurando que los artículos lleguen directamente al dominio público en Cloudflare.
-- **Hardening de IA:** `llm_writer.py` incluye ahora limpieza activa de preámbulos de IA para asegurar artículos limpios desde el segundo cero.
-- **Rescate de Contenido:** Limpieza profunda de `arnes-perro.md` y `cama-perro-grande.md`, y generación real para `comedero-automatico-gato.md`.
+### [2026-04-05] Estabilización de Producción y Blindaje (Hardening)
+- **Migración a Gemini:** Integrada la API de Google AI Studio (`gemma-4-31b-it`) como motor principal de redacción para eliminar cuellos de botella de hardware local.
+- **Estructura Raíz (v2.0):** Todo el proyecto Hugo se ha movido de `/site` a la raíz del repositorio. Se eliminó la carpeta `/site` redundante para evitar confusiones de rutas.
+- **Despliegue Producción:** Configurada la rama **`main`** como rama de producción por defecto, resolviendo el problema de las "Previews" permanentes en Cloudflare.
+- **Hardening de Scripts:** Actualizados `run_pipeline.py`, `llm_writer.py` y `audit_hugo.py` para trabajar con la nueva estructura de raíz y la rama `main` de forma automática.
+- **Limpieza de Contenido:** Eliminados los artículos de prueba (`test-hardening.md`) y el artículo corrupto (`comedero-automatico-gato.md`) para dejar la producción con 2 artículos de alta fidelidad (Arneses y Camas).
+- **Sanitizador IA:** Implementada limpieza activa de preámbulos de IA en `llm_writer.py` para asegurar artículos limpios desde la generación.
 
 ### [2026-04-04] Blindaje y Estabilidad Final (Wrap-up Sesión)
 - `llm_writer.py`: Optimización de hardware radical: Cambio a **`llama3.2:latest` (2GB)** para asegurar fluidez en la GTX 1650.
