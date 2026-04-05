@@ -1,0 +1,76 @@
+<!-- Shortcode: producto.html — Tarjeta de producto de alta conversion -->
+
+{{ $titulo := .Get "titulo" }}
+{{ $asin := .Get "asin" }}
+{{ $imagen := .Get "imagen" | default "" }}
+{{ $rating := .Get "rating" | default "N/A" }}
+{{ $reviews := .Get "reviews" | default "0" }}
+{{ $tag := .Get "tag" | default "TU-TAG-21" }}
+
+{{ if not $titulo }}
+  <!-- ERROR SHORTCODE: Falta parametro obligatorio "titulo" -->
+  <div style="background:#fef2f2; border:2px dashed #ef4444; border-radius:8px; padding:1rem; margin:1rem 0; color:#991b1b; font-size:0.9rem;">
+    <strong>⚠️ Error de shortcode:</strong> Falta el parámetro <code>titulo</code> en este bloque de producto.
+  </div>
+{{ else if not $asin }}
+  <!-- ERROR SHORTCODE: Falta parametro obligatorio "asin" -->
+  <div style="background:#fef2f2; border:2px dashed #ef4444; border-radius:8px; padding:1rem; margin:1rem 0; color:#991b1b; font-size:0.9rem;">
+    <strong>⚠️ Error de shortcode:</strong> Falta el parámetro <code>asin</code> para "{{ $titulo }}".
+  </div>
+{{ else }}
+
+{{ $enlace := printf "https://www.amazon.es/dp/%s?tag=%s" $asin $tag }}
+
+<div class="producto-card">
+  <div style="flex: 0 0 200px; display: flex; align-items: center; justify-content: center;">
+    {{ if $imagen }}
+    <img src="{{ $imagen }}" alt="{{ $titulo }}" loading="lazy" decoding="async"
+      onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'width:180px;height:180px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:3rem;\'>📦</div>';"
+      style="max-width:180px; max-height:200px; object-fit:contain; border-radius:8px; box-shadow:none;">
+    {{ else }}
+    <div style="width:180px; height:180px; background:#f3f4f6; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:3rem;">📦</div>
+    {{ end }}
+  </div>
+
+  <div style="flex: 1; min-width: 250px;">
+    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; font-weight: 700;">{{ $titulo }}</h3>
+    <p style="margin: 0.3rem 0; font-size: 0.9rem; color: #6b7280;">⭐ {{ $rating }}/5 · {{ $reviews }} valoraciones</p>
+
+    {{ $pros := slice }}
+    {{ range $i := seq 1 5 }}
+      {{ $pro := $.Get (printf "pro%d" $i) }}
+      {{ if $pro }}{{ $pros = $pros | append $pro }}{{ end }}
+    {{ end }}
+
+    {{ if $pros }}
+    <div class="pros-box">
+      <span class="box-title">Lo mejor</span>
+      <ul>
+        {{ range $pros }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ $cons := slice }}
+    {{ range $i := seq 1 5 }}
+      {{ $con := $.Get (printf "con%d" $i) }}
+      {{ if $con }}{{ $cons = $cons | append $con }}{{ end }}
+    {{ end }}
+
+    {{ if $cons }}
+    <div class="cons-box">
+      <span class="box-title">A tener en cuenta</span>
+      <ul>
+        {{ range $cons }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    <a href="{{ $enlace }}" target="_blank" rel="nofollow noopener sponsored"
+       style="display:inline-block; background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff; padding:0.75rem 1.8rem; border-radius:10px; font-weight:700; font-size:1rem; text-decoration:none; margin-top:0.8rem; box-shadow:0 3px 12px rgba(245,158,11,0.4); transition:all 0.3s ease;">
+      🛒 Ver precio actualizado en Amazon →
+    </a>
+  </div>
+</div>
+
+{{ end }}

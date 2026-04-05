@@ -1,0 +1,108 @@
+baseURL = 'https://compras-top.pages.dev/'
+languageCode = 'es-es'
+title = 'Compras Top — Guías de Compra Inteligentes'
+theme = 'PaperMod'
+
+# ─────────────────────────────────────────────
+# Params Globales
+# ─────────────────────────────────────────────
+[params]
+  env = 'production'
+  description = 'Comparativas honestas y guías de compra de los mejores productos de Amazon España. Análisis con IA, sin atajos.'
+  author = 'Compras Top'
+  showReadingTime = true
+  showShareButtons = true
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = false
+  ShowToc = true
+  TocOpen = true
+  ShowWordCount = true
+
+  # Branding
+  defaultTheme = 'auto'  # auto/dark/light
+  disableThemeToggle = false
+  ScrollToTop = true
+
+  # SEO: OpenGraph y Twitter Cards
+  images = ['https://compras-top.pages.dev/og-default.png']
+
+  [params.homeInfoParams]
+    Title = '🛒 Tu Guía de Compras Inteligente'
+    Content = """
+**¿Cansado de perder horas comparando productos?** Nosotros lo hacemos por ti.
+
+🔍 Analizamos decenas de opciones · ⭐ Filtramos por calidad real · 💰 Te llevamos directo al mejor precio en Amazon.
+
+_Explora nuestras categorías y encuentra exactamente lo que necesitas._
+"""
+
+  # Cover por defecto si un artículo no tiene imagen
+  [params.cover]
+    linkFullImages = false
+    responsiveImages = true
+    hidden = false
+
+  # Etiquetas y taxonomías para SEO
+  [params.assets]
+    disableFingerprinting = false
+
+  # Favicon (puedes añadir archivos en static/ después)
+  # favicon = '/favicon.ico'
+
+# ─────────────────────────────────────────────
+# Menú de Navegación
+# ─────────────────────────────────────────────
+[[menu.main]]
+  identifier = 'mascotas'
+  name = '🐾 Mascotas'
+  url = '/mascotas/'
+  weight = 10
+
+[[menu.main]]
+  identifier = 'herramientas'
+  name = '🛠️ Herramientas'
+  url = '/herramientas/'
+  weight = 20
+
+[[menu.main]]
+  identifier = 'hogar'
+  name = '🏠 Hogar'
+  url = '/hogar/'
+  weight = 30
+
+# ─────────────────────────────────────────────
+# Markup / Goldmark
+# ─────────────────────────────────────────────
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+# ─────────────────────────────────────────────
+# Outputs: RSS + Sitemap + HTML
+# ─────────────────────────────────────────────
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+# ─────────────────────────────────────────────
+# Sitemap
+# ─────────────────────────────────────────────
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+# ─────────────────────────────────────────────
+# Minificación
+# ─────────────────────────────────────────────
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false

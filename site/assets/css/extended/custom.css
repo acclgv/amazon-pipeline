@@ -1,0 +1,447 @@
+/* ═══════════════════════════════════════════════════════════
+   Compras Top — Extended CSS (PaperMod Override) v2
+   Affiliate Shopping Magazine · Premium Styling
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Variables de Marca ─── */
+:root {
+  --accent-color: #f59e0b;
+  --accent-hover: #d97706;
+  --accent-light: #fef3c7;
+  --pros-bg: #f0fdf4;
+  --pros-border: #86efac;
+  --pros-text: #166534;
+  --cons-bg: #fef2f2;
+  --cons-border: #fca5a5;
+  --cons-text: #991b1b;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --card-shadow-hover: 0 10px 25px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.08);
+  --card-radius: 12px;
+  --font-body: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ─── Tipografía Global ─── */
+body {
+  font-family: var(--font-body);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.post-content h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.post-content h3 {
+  color: var(--accent-hover);
+}
+
+/* ─── Bloque E-E-A-T (Autoridad Visual) ─── */
+.eeat-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--accent-light);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #92400e;
+  margin: 0.8rem 0 1.5rem 0;
+  border: 1px solid #fde68a;
+}
+
+.dark .eeat-meta {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+.eeat-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.eeat-meta span::before {
+  font-size: 1rem;
+}
+
+/* ─── Sticky Table of Contents (Desktop) ─── */
+@media (min-width: 1200px) {
+  .toc {
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    float: left;
+    width: 240px;
+    margin-left: -280px;
+    padding-right: 1.5rem;
+    font-size: 0.82rem;
+    border-right: 2px solid var(--accent-light);
+  }
+
+  .toc details summary {
+    font-weight: 700;
+    color: var(--accent-hover);
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  .toc ul {
+    list-style: none;
+    padding-left: 0.8rem;
+  }
+
+  .toc li {
+    margin: 0.25rem 0;
+    line-height: 1.5;
+  }
+
+  .toc a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover {
+    color: var(--accent-color);
+  }
+
+  /* Scrollbar sutil en ToC */
+  .toc::-webkit-scrollbar {
+    width: 3px;
+  }
+  .toc::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 3px;
+  }
+}
+
+/* ─── Tarjetas de Posts en Home (Card Layout) ─── */
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+
+.post-entry:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+.post-entry .entry-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.post-entry .entry-cover {
+  border-radius: var(--card-radius) var(--card-radius) 0 0;
+}
+
+/* ─── Estilo del Disclosure (Aviso Legal Afiliados) ─── */
+.post-content > blockquote:first-of-type {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #92400e;
+  margin: 1.5rem 0;
+}
+
+.dark .post-content > blockquote:first-of-type {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.25);
+  border-left-color: var(--accent-color);
+  color: #fcd34d;
+}
+
+/* ─── Cajas Pros y Contras Premium ─── */
+.pros-box,
+.cons-box {
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.pros-box {
+  background: var(--pros-bg);
+  border: 1px solid var(--pros-border);
+  border-left: 4px solid #22c55e;
+}
+
+.cons-box {
+  background: var(--cons-bg);
+  border: 1px solid var(--cons-border);
+  border-left: 4px solid #ef4444;
+}
+
+.dark .pros-box {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.2);
+  border-left-color: #22c55e;
+}
+
+.dark .cons-box {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.2);
+  border-left-color: #ef4444;
+}
+
+.pros-box .box-title,
+.cons-box .box-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.pros-box .box-title { color: var(--pros-text); }
+.cons-box .box-title { color: var(--cons-text); }
+.dark .pros-box .box-title { color: #86efac; }
+.dark .cons-box .box-title { color: #fca5a5; }
+
+.pros-box ul,
+.cons-box ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pros-box li::before {
+  content: '✅ ';
+}
+
+.cons-box li::before {
+  content: '❌ ';
+}
+
+.pros-box li,
+.cons-box li {
+  padding: 0.2rem 0;
+}
+
+/* ─── Botones CTA (Call to Action de Amazon) ─── */
+.post-content a[href*="amazon.es"] {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  color: #fff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+  margin: 0.3rem 0;
+}
+
+.post-content a[href*="amazon.es"]:hover {
+  background: linear-gradient(135deg, var(--accent-hover), #b45309);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
+  text-decoration: none;
+}
+
+.post-content a[href*="amazon.es"]::before {
+  content: '🛒 ';
+}
+
+/* ─── Tablas Comparativas (Responsive) ─── */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+
+.post-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  margin: 1.5rem 0;
+  min-width: 500px;
+}
+
+.post-content table thead th {
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.post-content table tbody td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+
+.post-content table tbody tr:hover {
+  background: var(--accent-light);
+}
+
+.dark .post-content table tbody tr:hover {
+  background: rgba(245, 158, 11, 0.06);
+}
+
+/* Tabla comparativa: columna ganadora */
+.comparativa-table tr.ganador {
+  background: var(--accent-light) !important;
+  font-weight: 600;
+}
+
+.comparativa-table tr.ganador td:first-child {
+  border-left: 4px solid var(--accent-color);
+}
+
+.dark .comparativa-table tr.ganador {
+  background: rgba(245, 158, 11, 0.1) !important;
+}
+
+/* ─── Imágenes de Producto ─── */
+.post-content img {
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+  max-height: 300px;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+}
+
+.post-content img:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: scale(1.02);
+}
+
+.post-content img[src=""],
+.post-content img:not([src]) {
+  display: none;
+}
+
+/* ─── Fichas Técnicas (Subsecciones) ─── */
+.post-content h3 + table {
+  border-left: 3px solid var(--accent-color);
+}
+
+/* ─── ScrollToTop Button ─── */
+#top-link {
+  background: var(--accent-color) !important;
+  border: none;
+}
+
+#top-link:hover {
+  background: var(--accent-hover) !important;
+}
+
+/* ─── Home Info (Landing Message) ─── */
+.first-entry .entry-header h1 {
+  font-size: 1.8rem;
+}
+
+.first-entry .entry-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ─── Footer ─── */
+.footer {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ─── Breadcrumbs ─── */
+.breadcrumbs a {
+  color: var(--accent-color);
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ─── Producto Card (Shortcode) ─── */
+.producto-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+}
+
+.producto-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--accent-color);
+}
+
+/* ─── Responsive Tweaks ─── */
+@media (max-width: 768px) {
+  .post-content a[href*="amazon.es"] {
+    display: block;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .post-content table {
+    font-size: 0.82rem;
+  }
+
+  .post-content img {
+    max-height: 220px;
+  }
+
+  .producto-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .eeat-meta {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}
+
+/* ─── Print: Ocultar elementos interactivos ─── */
+@media print {
+  .post-content a[href*="amazon.es"],
+  #top-link,
+  .toc {
+    display: none !important;
+  }
+}

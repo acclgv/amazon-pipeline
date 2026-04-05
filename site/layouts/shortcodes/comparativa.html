@@ -1,0 +1,52 @@
+<!-- Shortcode: comparativa.html — Tabla comparativa visual con ganador destacado -->
+
+{{ $tag := .Get "tag" | default "TU-TAG-21" }}
+{{ $ganador := .Get "ganador" | default "1" }}
+
+<div class="table-responsive">
+<table class="comparativa-table" style="width:100%; border-collapse:separate; border-spacing:0; border-radius:10px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,0.08); margin:1.5rem 0;">
+  <thead>
+    <tr>
+      <th style="background:#f59e0b; color:#fff; padding:0.8rem 1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.03em;">Producto</th>
+      <th style="background:#f59e0b; color:#fff; padding:0.8rem 1rem; font-weight:700; text-transform:uppercase;">Nota</th>
+      <th style="background:#f59e0b; color:#fff; padding:0.8rem 1rem; font-weight:700; text-transform:uppercase;">Ideal para</th>
+      <th style="background:#f59e0b; color:#fff; padding:0.8rem 1rem; font-weight:700; text-transform:uppercase; text-align:center;">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $i := seq 1 10 }}
+      {{ $nombre := $.Get (printf "p%d" $i) }}
+      {{ if $nombre }}
+        {{ $nota := $.Get (printf "nota%d" $i) | default "—" }}
+        {{ $ideal := $.Get (printf "ideal%d" $i) | default "—" }}
+        {{ $asin := $.Get (printf "asin%d" $i) | default "" }}
+        {{ $isGanador := eq (printf "%d" $i) $ganador }}
+        {{ $enlace := printf "https://www.amazon.es/dp/%s?tag=%s" $asin $tag }}
+
+        <tr {{ if $isGanador }}class="ganador" title="🏆 Nuestra recomendación"{{ end }}
+            style="{{ if $isGanador }}background:#fef3c7; font-weight:600;{{ end }} transition: background 0.2s;">
+          <td style="padding:0.7rem 1rem; border-bottom:1px solid #e5e7eb;">
+            {{ if $isGanador }}🏆 {{ end }}{{ $nombre }}
+          </td>
+          <td style="padding:0.7rem 1rem; border-bottom:1px solid #e5e7eb;">
+            ⭐ {{ $nota }}
+          </td>
+          <td style="padding:0.7rem 1rem; border-bottom:1px solid #e5e7eb;">
+            {{ $ideal }}
+          </td>
+          <td style="padding:0.7rem 1rem; border-bottom:1px solid #e5e7eb; text-align:center;">
+            {{ if $asin }}
+            <a href="{{ $enlace }}" target="_blank" rel="nofollow noopener sponsored"
+               style="display:inline-block; background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff; padding:0.4rem 1rem; border-radius:6px; font-weight:700; font-size:0.85rem; text-decoration:none; box-shadow:0 2px 6px rgba(245,158,11,0.3);">
+              Ver precio →
+            </a>
+            {{ else }}
+            <span style="color:#9ca3af;">—</span>
+            {{ end }}
+          </td>
+        </tr>
+      {{ end }}
+    {{ end }}
+  </tbody>
+</table>
+</div>
