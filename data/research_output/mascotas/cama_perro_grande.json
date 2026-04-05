@@ -1,0 +1,109 @@
+{
+  "keyword": "cama perro grande",
+  "niche": "mascotas",
+  "scraped_at": "2026-04-05T13:08:28",
+  "source": "amazon.es",
+  "products": [
+    {
+      "position": 1,
+      "asin": "B0DCJKCTT7",
+      "title": "WAVVE Cama Perro Extra Grande Ortopédica 112x81x7.6 cm, Colchon Perro Impermeable Lavable Desenfundable, Colchoneta Perro ...",
+      "price_eur": 37.99,
+      "rating": 4.7,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61Jb9KeuX7L.jpg",
+      "product_url": "https://www.amazon.es/dp/B0DCJKCTT7"
+    },
+    {
+      "position": 2,
+      "asin": "B0DPZZ831Q",
+      "title": "EHEYCIGA Cama Ortopedica y Viscoelastica para Perro Extra Grande 106x76x18.5 cm, Memory Foam Sofa para Perros Lavable, Cam...",
+      "price_eur": 47.59,
+      "rating": 4.7,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/710s6MvJO+L.jpg",
+      "product_url": "https://www.amazon.es/dp/B0DPZZ831Q"
+    },
+    {
+      "position": 3,
+      "asin": "B0BVY2K2JV",
+      "title": "KSIIA Cama para Perro Grande, 90x60cm, Camas Antiestres L, Colchon Cojín Perro Grande, Colchoneta Lavable a Máquina, Fondo...",
+      "price_eur": 22.99,
+      "rating": 4.4,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61azGm7BWUL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0BVY2K2JV"
+    },
+    {
+      "position": 4,
+      "asin": "B0C27CVCG2",
+      "title": "Nobleza Cama Lavable para Perro Grande, Super Suave y Esponjosa Anti-Ansiedad, Felpa con Fondo Antideslizante, Gris Anties...",
+      "price_eur": 18.68,
+      "rating": 4.0,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/618JkgLEtvL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0C27CVCG2"
+    },
+    {
+      "position": 5,
+      "asin": "B0FDB3F4Q6",
+      "title": "KSIIA Cama ortopédica extragrande para perros XL impermeable con refuerzo en forma de U, funda extraíble lavable y parte i...",
+      "price_eur": 35.99,
+      "rating": 4.5,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61tKNYwzWhL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0FDB3F4Q6"
+    },
+    {
+      "position": 6,
+      "asin": "B08ND13C5D",
+      "title": "Bedsure Sofá Perro Ortopédica Extra Grande - Cama Perro Viscoelastica y Lavable, Colchon Perro con Funda Desenfundable y F...",
+      "price_eur": 47.59,
+      "rating": 4.5,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71BC9otLHOL.jpg",
+      "product_url": "https://www.amazon.es/dp/B08ND13C5D"
+    },
+    {
+      "position": 7,
+      "asin": "B0BNLWVPHD",
+      "title": "EHEYCIGA Cama Perro Extra Grande 112x81x16cm, Colchon Perro Impermeable Lavable con Espuma Viscoelástica, Sofá Perro Ortop...",
+      "price_eur": 56.99,
+      "rating": 4.6,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61E5+Tg-R9L.jpg",
+      "product_url": "https://www.amazon.es/dp/B0BNLWVPHD"
+    },
+    {
+      "position": 8,
+      "asin": "B0CMZ7L79D",
+      "title": "KSIIA Cama Perro Grande, Cama Ortopédica para Perros (105x70x18cm) Desenfundable y Lavable, Sofá para Perros, Gris XL",
+      "price_eur": 39.59,
+      "rating": 4.7,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71q0fcd9qXL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CMZ7L79D"
+    },
+    {
+      "position": 9,
+      "asin": "B0CHDLZ1P7",
+      "title": "FURTIME Cama Perro, Cama Perros Grande Lavable Esponjosa, Camas Perros Antideslizante Antiansiedad, 89x63x23cm",
+      "price_eur": 31.99,
+      "rating": 4.4,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/71mE2IdjzPL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CHDLZ1P7"
+    },
+    {
+      "position": 10,
+      "asin": "B0FD9Z2TK6",
+      "title": "KSIIA Cama Extra Grande para Perro Impermeable Ortopédica XXL Sofá Cama para Perro con Refuerzo en Forma de U, Funda Extra...",
+      "price_eur": 47.82,
+      "rating": 4.5,
+      "review_count": null,
+      "image_url": "https://m.media-amazon.com/images/I/61tKNYwzWhL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0FD9Z2TK6"
+    }
+  ],
+  "total_results_found": 10
+}

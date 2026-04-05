@@ -1,0 +1,107 @@
+{
+  "article_path": "C:\\Users\\Luis García Villena\\Desktop\\amazon-pipeline\\site\\content\\mascotas\\comedero-automatico-gato.md",
+  "score": 76,
+  "result": "APROBADO",
+  "timestamp": "2026-04-03T21:15:26.957202",
+  "checks": [
+    {
+      "name": "disclosure",
+      "score": 10,
+      "max": 10,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "price_placeholders",
+      "score": 10,
+      "max": 15,
+      "status": "warn",
+      "details": "Precio hardcodeado en la linea 123."
+    },
+    {
+      "name": "ia_speak",
+      "score": 0,
+      "max": 15,
+      "status": "fail",
+      "details": "Frase IA detectada en linea 111: 'cabe destacar'. Frase IA detectada en linea 216: 'lo siento'. Frase IA detectada en linea 216: 'no puedo'."
+    },
+    {
+      "name": "keyword_stuffing",
+      "score": 10,
+      "max": 10,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "structure",
+      "score": 10,
+      "max": 10,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "affiliate_links",
+      "score": 10,
+      "max": 10,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "schema_jsonld",
+      "score": 5,
+      "max": 5,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "front_matter",
+      "score": 5,
+      "max": 5,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "images",
+      "score": 5,
+      "max": 5,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "length",
+      "score": 5,
+      "max": 5,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "name": "ai_naturalness",
+      "score": 6,
+      "max": 10,
+      "status": "warn",
+      "details": "El texto es informativo y estructurado, pero usa frases como 'no te preocupes' y 'te ayudaremos a descubrir' que son un poco demasiado directas y carecen de naturalidad. La repetición de 'comedero automático gato' también resulta algo forzada."
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "line": 123,
+      "description": "Precio hardcodeado encontrado: 29.99€"
+    },
+    {
+      "severity": "critical",
+      "line": 111,
+      "description": "Frase o rechazo de IA ('cabe destacar')"
+    },
+    {
+      "severity": "critical",
+      "line": 216,
+      "description": "Frase o rechazo de IA ('lo siento')"
+    },
+    {
+      "severity": "critical",
+      "line": 216,
+      "description": "Frase o rechazo de IA ('no puedo')"
+    }
+  ]
+}

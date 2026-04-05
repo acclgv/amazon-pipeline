@@ -435,16 +435,19 @@ def check_ai_naturalness(report: QAReport, body: str, ollama: OllamaClient):
     # Extraer primer tercio del artículo (aprox) para no saturar memoria
     sample_text = body[:3000]
 
-    system = "Eres una experta editora de textos seo en español. Tu objetivo es detectar la naturalidad humana."
+    system = "Eres una experta editora de textos SEO en español. Tu objetivo es detectar la naturalidad humana y penalizar el lenguaje robótico."
     prompt = f"""
-Lee el siguiente fragmento de un artículo de afiliado y dime cómo de natural y humano suena del 1 al 10.
-Un 1 es una traducción automática o puro lenguaje robótico y repetitivo ("es importante destacar", "sin duda").
-Un 10 es un artículo escrito por un nativo experto, ameno y directo.
+Analiza la naturalidad de este fragmento de artículo de afiliado.
 
-[TEXTO]
+REGLAS DE SALIDA:
+- Devuelve ÚNICAMENTE un objeto JSON válido.
+- NO incluyas introducciones ni explicaciones fuera del JSON.
+
+[TEXTO A EVALUAR]
 {sample_text}
 
-Tu respuesta debe ser un JSON estricto con este formato: {{"score": X, "reason": "tu justificacion breve"}}
+JSON de salida esperado:
+{{"score": X, "reason": "justificación breve (máx 15 palabras)"}}
 """
     try:
         response = ollama.generate(MODEL_QA_AI_FALLBACK, prompt, system, temperature=0.1, max_tokens=150)

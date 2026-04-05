@@ -1,0 +1,249 @@
+{
+  "niche": "mascotas",
+  "category_slug": "mascotas",
+  "seed_keywords": [
+    "comedero automatico gato",
+    "cama perro grande",
+    "arnes perro",
+    "fuente agua gatos",
+    "transportin gato"
+  ],
+  "generated_at": "2026-04-05T13:07:02",
+  "sources_count": 2,
+  "articles_count": 16,
+  "trending_topics": [
+    {
+      "topic": "perro",
+      "mentions": 8
+    },
+    {
+      "topic": "curiosidades",
+      "mentions": 4
+    },
+    {
+      "topic": "promociones",
+      "mentions": 2
+    },
+    {
+      "topic": "razas grandes",
+      "mentions": 2
+    },
+    {
+      "topic": "gato",
+      "mentions": 2
+    },
+    {
+      "topic": "veterinaria",
+      "mentions": 1
+    },
+    {
+      "topic": "código promocional para cunipic",
+      "mentions": 1
+    },
+    {
+      "topic": "descuento para piensos era",
+      "mentions": 1
+    },
+    {
+      "topic": "promoción cunipic",
+      "mentions": 1
+    },
+    {
+      "topic": "cómo cuidar a un perro bearded collie",
+      "mentions": 1
+    },
+    {
+      "topic": "comportamiento de los perros bearded collie",
+      "mentions": 1
+    },
+    {
+      "topic": "educación básica",
+      "mentions": 1
+    },
+    {
+      "topic": "cómo entrenar a mi cachorro para que no muerda",
+      "mentions": 1
+    },
+    {
+      "topic": "cómo entrenar a un cachorro para que haga pis fuera de casa",
+      "mentions": 1
+    },
+    {
+      "topic": "cuando empezar a entrenar a mi cachorro?",
+      "mentions": 1
+    }
+  ],
+  "articles": [
+    {
+      "source": "Soy un Perro",
+      "title": "¿Cuáles son los mejores seguros para perros en España? Abril 2026",
+      "summary": "La seguridad y tranquilidad que se obtiene al contratar el mejor seguro veterinario para tu&#8230;",
+      "url": "https://soyunperro.com/cuales-son-los-mejores-seguros-para-perros-en-espana/",
+      "published": "Fri, 27 Feb 2026 01:04:03 +0000",
+      "tags": [
+        "veterinaria"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "50% Código descuento Dogfy Diet verificado Abril 2026",
+      "summary": "Seguro que ya conoces la comunidad de la alimentación natural y que gracias a las&#8230;",
+      "url": "https://soyunperro.com/cupon-descuento-dogfydiet/",
+      "published": "Fri, 27 Feb 2026 01:03:22 +0000",
+      "tags": [
+        "promociones"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "Descuentos Cunipic Abril 2026",
+      "summary": "A la hora de comprar la comida para nuestra mascota, siempre podemos ahorrar un poco&#8230;",
+      "url": "https://soyunperro.com/cupon-descuento-cunipic-era/",
+      "published": "Fri, 27 Feb 2026 01:00:37 +0000",
+      "tags": [
+        "promociones",
+        "código promocional para cunipic",
+        "descuento para piensos era",
+        "promoción cunipic"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "Bearded collie",
+      "summary": "En una primera impresión, del Bearded collie destaca su pelo largo y sus ojos dulces&#8230;",
+      "url": "https://soyunperro.com/bearded-collie/",
+      "published": "Tue, 20 Jan 2026 05:44:26 +0000",
+      "tags": [
+        "razas grandes",
+        "cómo cuidar a un perro bearded collie",
+        "comportamiento de los perros bearded collie"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "Broholmer o Mastín danés",
+      "summary": "El Mastín danés, más conocido en su país de origen como Broholmer, es una raza&#8230;",
+      "url": "https://soyunperro.com/broholmer-o-mastin-danes/",
+      "published": "Tue, 20 Jan 2026 02:00:42 +0000",
+      "tags": [
+        "razas grandes"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "Cómo entrenar a un cachorro",
+      "summary": "Sin lugar a dudas un cachorro será la alegría de nuestro hogar pero ¿será necesario&#8230;",
+      "url": "https://soyunperro.com/entrenar-cachorro/",
+      "published": "Tue, 20 Jan 2026 02:00:16 +0000",
+      "tags": [
+        "educación básica",
+        "cómo entrenar a mi cachorro para que no muerda",
+        "cómo entrenar a un cachorro para que haga pis fuera de casa",
+        "cuando empezar a entrenar a mi cachorro?"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "Motivos por los que un perro se emociona al vernos",
+      "summary": "La alegría con la que nuestros peludos nos reciben al llegar a casa es –&#8230;",
+      "url": "https://soyunperro.com/perro-se-emociona-al-vernos/",
+      "published": "Tue, 20 Jan 2026 01:24:30 +0000",
+      "tags": [
+        "comportamiento"
+      ]
+    },
+    {
+      "source": "Soy un Perro",
+      "title": "8 Deportes para practicar con nuestro perro",
+      "summary": "Si siempre te ha gustado hacer deporte ¿por qué no hacerlo junto a tu perro?&#8230;",
+      "url": "https://soyunperro.com/deportes-para-perros/",
+      "published": "Mon, 19 Jan 2026 10:44:45 +0000",
+      "tags": [
+        "juegos y ejercicios",
+        "deportes para perros con humanos",
+        "ejercicios saludables para perros"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "Catlink Open-X: el arenero inteligente que todo papá de gatitos necesita",
+      "summary": "Si tienes gatos en casa, seguro sabes lo que se siente llegar cansado del trabajo y encontrarte con el arenero sucio. O peor aún, notar un olor fuerte justo cuando tienes visitas. Mantener limpio el arenero y cuidar la salud de nuestros gatitos puede ser un desafío, en especial cuando no estamos en casa.&#160; Después [&#8230;] La entrada Catlink Open-X: el arenero inteligente que todo papá de gatitos necesita se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/catlink-open-x-el-arenero-inteligente-que-todo-papa-de-gatitos-necesita/",
+      "published": "Mon, 02 Feb 2026 17:58:44 +0000",
+      "tags": [
+        "curiosidades"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "Esa mascota que siempre está, también merece un recuerdo: 6 ideas para no olvidarla",
+      "summary": "Todos los que vivimos con una mascota sabemos que no es solo un animal. Es quien nos acompaña en los días buenos y nos reconforta en los difíciles. Un amigo fiel que está presente en las siestas compartidas, los encuentros en familia y esos momentos cotidianos que, sin darnos cuenta, se vuelven los más valiosos. [&#8230;] La entrada Esa mascota que siempre está, también merece un recuerdo: 6 ideas para no olvidarla se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/ideas-de-recuerdos-para-no-olvidar-a-tu-mascota/",
+      "published": "Mon, 26 Jan 2026 15:02:46 +0000",
+      "tags": [
+        "curiosidades"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "Trabajar en zoológicos: la pasión de cuidar a los animales",
+      "summary": "Si alguna vez has soñado con dedicar tu vida a los animales, trabajar en zoológicos puede ser mucho más que un sueño de infancia: es una profesión muy valiosa que combina vocación, conocimiento y responsabilidad. Pero para convertir esta pasión en una carrera sólida, es fundamental contar con una buena formación académica. Un buen [&#8230;] La entrada Trabajar en zoológicos: la pasión de cuidar a los animales se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/trabajar-en-zoologicos-la-pasion-por-cuidar-animale/",
+      "published": "Wed, 22 Oct 2025 16:05:10 +0000",
+      "tags": [
+        "curiosidades"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "Qué llevar en la maleta de tu mascota para las vacaciones",
+      "summary": "Viajar con nuestras mascotas es una de esas experiencias inolvidables que todos debemos vivir al menos una vez. Conocer juntos el mar, explorar una montaña o dar un paseo por una ciudad desconocida puede convertirse en un recuerdo mágico para ambos. Y para que todo salga bien, es importante preparar con cuidado la maleta de [&#8230;] La entrada Qué llevar en la maleta de tu mascota para las vacaciones se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/que-llevar-en-la-maleta-de-tu-mascota-para-las-vacaciones/",
+      "published": "Mon, 09 Jun 2025 18:10:31 +0000",
+      "tags": [
+        "actualidad"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "Temporada de oruga procesionaria: riesgos para los perros y cómo protegerlos",
+      "summary": "Aunque solemos pensar en serpientes o insectos exóticos como amenazas para nuestras mascotas, existe un enemigo silencioso que aparece cada año en parques y zonas arboladas: la oruga procesionaria del pino. Esta pequeña larva, perteneciente a la mariposa nocturna Thaumetopea pityocampa, está recubierta de pelos urticantes altamente tóxicos que pueden provocar desde fuertes reacciones alérgicas [&#8230;] La entrada Temporada de oruga procesionaria: riesgos para los perros y cómo protegerlos se...",
+      "url": "https://misanimales.com/oruga-procesionaria-perros/",
+      "published": "Wed, 30 Apr 2025 18:00:00 +0000",
+      "tags": [
+        "bienestar y cuidados"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "5 consejos para trabajar desde casa con tu mascota",
+      "summary": "Tener la posibilidad de teletrabajar te permite compartir más con tu peludo, pero también implica hacer algunos cambios en la rutina y la organización para mantener la concentración sin descuidarlo. La entrada 5 consejos para trabajar desde casa con tu mascota se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/consejos-para-trabajar-desde-casa-con-tu-mascota/",
+      "published": "Sun, 27 Apr 2025 07:00:00 +0000",
+      "tags": [
+        "curiosidades"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "Tipos de mantis: clasificación, características y hábitat",
+      "summary": "Existen en el mundo variedad de especies o tipos de mantis: europea, africana, palo, diabólica, fantasma y orquídea. Son insectos depredadores, de cabeza grande y triangular, con dos ojos compuestos, tres pequeños ocelos, antenas largas y delgadas, cuello flexible, cuerpo elongado y extremidades anteriores raptoriales, adornadas con espinas, que le sirven para la captura de [&#8230;] La entrada Tipos de mantis: clasificación, características y hábitat se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/tipos-de-mantis/",
+      "published": "Wed, 19 Mar 2025 19:00:00 +0000",
+      "tags": [
+        "invertebrados"
+      ]
+    },
+    {
+      "source": "Mis Animales",
+      "title": "¿Qué pasa si le doy queso a mi gato?",
+      "summary": "El queso es un alimento que contiene lactosa, sal, grasas y puede presentar aditivos tóxicos para tu gato. La entrada ¿Qué pasa si le doy queso a mi gato? se publicó primero en Mis animales .",
+      "url": "https://misanimales.com/los-gatos-pueden-comer-queso/",
+      "published": "Wed, 12 Mar 2025 19:00:00 +0000",
+      "tags": [
+        "alimentos prohibidos"
+      ]
+    }
+  ],
+  "usage_instructions": "Este contexto es para el LLM Writer (llm_writer.py). Úsalo como referencia de contenido actual y tendencias del nicho. NO copies texto literal de los artículos. Usa los temas y tendencias para enriquecer el contenido generado."
+}

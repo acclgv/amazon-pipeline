@@ -1,0 +1,93 @@
+{
+  "mascotas": {
+    "category_slug": "mascotas",
+    "seed_keywords": [
+      "comedero automatico gato",
+      "cama perro grande",
+      "arnes perro",
+      "fuente agua gatos",
+      "transportin gato"
+    ],
+    "rss_feeds": [
+      {
+        "url": "https://www.tiendanimal.es/articulos/feed/",
+        "name": "Tiendanimal Blog",
+        "priority": 1
+      },
+      {
+        "url": "https://soyunperro.com/feed/",
+        "name": "Soy un Perro",
+        "priority": 2
+      },
+      {
+        "url": "https://misanimales.com/feed/",
+        "name": "Mis Animales",
+        "priority": 2
+      },
+      {
+        "url": "https://www.affinity-petcare.com/vetsandclinics/feed/",
+        "name": "Affinity Vets & Clinics",
+        "priority": 3
+      }
+    ]
+  },
+  "herramientas": {
+    "category_slug": "herramientas",
+    "seed_keywords": [
+      "taladro percutor",
+      "atornillador electrico",
+      "nivel laser",
+      "sierra circular",
+      "caja herramientas"
+    ],
+    "rss_feeds": [
+      {
+        "url": "https://ovacen.com/feed/",
+        "name": "OVACEN",
+        "priority": 1
+      },
+      {
+        "url": "https://casaydiseno.com/feed/",
+        "name": "Casa y Diseño",
+        "priority": 2
+      },
+      {
+        "url": "https://decoracion2.com/feed/",
+        "name": "Decoración 2.0",
+        "priority": 3
+      }
+    ]
+  },
+  "hogar": {
+    "category_slug": "hogar",
+    "seed_keywords": [
+      "robot aspirador",
+      "freidora sin aceite",
+      "humidificador",
+      "organizador cajones",
+      "luz LED armario"
+    ],
+    "rss_feeds": [
+      {
+        "url": "https://www.decoora.com/feed/",
+        "name": "Decoora",
+        "priority": 1
+      },
+      {
+        "url": "https://decoracion2.com/feed/",
+        "name": "Decoración 2.0",
+        "priority": 1
+      },
+      {
+        "url": "https://casaydiseno.com/feed/",
+        "name": "Casa y Diseño",
+        "priority": 2
+      },
+      {
+        "url": "https://ovacen.com/feed/",
+        "name": "OVACEN",
+        "priority": 3
+      }
+    ]
+  }
+}

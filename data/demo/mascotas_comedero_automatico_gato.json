@@ -1,0 +1,59 @@
+{
+  "keyword": "comedero automatico gato",
+  "niche": "mascotas",
+  "scraped_at": "2026-04-03T20:00:00",
+  "source": "amazon.es",
+  "total_results_found": 5,
+  "products": [
+    {
+      "position": 1,
+      "asin": "B0DKJF8R2X",
+      "title": "PETLIBRO Comedero Automático para Gatos, 5L WiFi con App Control, Dispensador de Comida para Gatos y Perros Pequeños, 10 Comidas al Día, Doble Fuente de Alimentación",
+      "price_eur": 59.99,
+      "rating": 4.6,
+      "review_count": 8542,
+      "image_url": "https://m.media-amazon.com/images/I/71kGxVq+URL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0DKJF8R2X"
+    },
+    {
+      "position": 2,
+      "asin": "B0C3XHKN7P",
+      "title": "Faroro Comedero Automático Gatos 5L, Dispensador Comida Gatos con Temporizador, 6 Comidas/día, Sensor Infrarrojo Anti-atasco, Pantalla LED",
+      "price_eur": 39.99,
+      "rating": 4.4,
+      "review_count": 3217,
+      "image_url": "https://m.media-amazon.com/images/I/61dR7KLNFAL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0C3XHKN7P"
+    },
+    {
+      "position": 3,
+      "asin": "B0BN1HP5KZ",
+      "title": "WOPET Comedero Automático para Gatos y Perros Pequeños, 4L con Grabación de Voz, Programable 1-4 Comidas/Día, Bandeja de Acero Inoxidable Desmontable",
+      "price_eur": 45.99,
+      "rating": 4.3,
+      "review_count": 5891,
+      "image_url": "https://m.media-amazon.com/images/I/71Z+3LqkURL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0BN1HP5KZ"
+    },
+    {
+      "position": 4,
+      "asin": "B0DJMWY63N",
+      "title": "Balimo Comedero Automático Gatos, 3.5L Dispensador de Comida con Temporizador, Hasta 6 Comidas al Día, Control de Porciones, Apto para Gatos y Perros Pequeños",
+      "price_eur": 29.99,
+      "rating": 4.2,
+      "review_count": 1876,
+      "image_url": "https://m.media-amazon.com/images/I/61YjF+hTURL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0DJMWY63N"
+    },
+    {
+      "position": 5,
+      "asin": "B0CR8WLNJK",
+      "title": "HoneyGuaridan Comedero Automático Gatos WiFi, 6L Gran Capacidad, App Control Remoto, 8 Comidas al Día con Grabación de Voz, Compatible con Alexa",
+      "price_eur": 69.99,
+      "rating": 4.5,
+      "review_count": 4103,
+      "image_url": "https://m.media-amazon.com/images/I/71QRs+vLURL.jpg",
+      "product_url": "https://www.amazon.es/dp/B0CR8WLNJK"
+    }
+  ]
+}
