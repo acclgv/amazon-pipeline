@@ -859,7 +859,7 @@ def main():
     logger.info(f"{'='*60}")
     logger.info(f"  Tiempo total:    {elapsed:.1f}s")
     logger.info(f"  Productos:       {len(products)}")
-    logger.info(f"  Llamadas Ollama: {ollama._call_count}")
+    logger.info(f"  Llamadas IA:     {ai_client._call_count}")
     logger.info(f"  Archivo:         {output_path}")
     logger.info("✅ Generador IA finalizado.\n")
 
