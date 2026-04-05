@@ -40,7 +40,7 @@ from utils import (
 # ─────────────────────────────────────────────
 
 OLLAMA_BASE_URL = "http://localhost:11434"
-SITE_CONTENT_DIR = PROJECT_ROOT / "site" / "content"
+SITE_CONTENT_DIR = PROJECT_ROOT / "content"
 RESEARCH_OUTPUT_DIR = DATA_DIR / "research_output"
 CONTEXT_OUTPUT_DIR = DATA_DIR / "context_output"
 DEMO_DIR = DATA_DIR / "demo"

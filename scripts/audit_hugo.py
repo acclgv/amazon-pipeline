@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-SITE_CONTENT_DIR = PROJECT_ROOT / "site" / "content"
+SITE_CONTENT_DIR = PROJECT_ROOT / "content"
 
 CORRECT_DOMAIN = "https://compras-top.pages.dev"
 
